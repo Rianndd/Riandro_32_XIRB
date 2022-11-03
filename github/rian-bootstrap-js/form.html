@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <title>Perkenalan Bootstrap</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <style>
+      body {
+        background-color: lightgrey;
+      }
+      .nav nav-pills {
+        color: white;
+      }
+      #container {
+                width: 600px;
+                margin: 20px auto;
+            }
+            .ck-editor__editable[role="textbox"] {
+                /* editing area */
+                min-height: 200px;
+            }
+            .ck-content .image {
+                /* block images */
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary text-opacity-75">
+        <div class="container">
+          <img src="img/picture1.jfif" alt="" style="height: 30px; padding-right: 550px;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse" style="font-family: roboto;">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html" style="color: black; margin-right: 20px;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#hunter" style="color: black; margin-right: 20px;">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#galeri" style="color: black; margin-right: 20px;">Galeri</a>
+              </li>
+              <li class="nav-item">
+                <a href="table.html" class="nav-link" style="color: black; margin-right: 20px;">Table</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active btn btn-primary" style="color: black; margin-right: 20px;">Form</a>
+              </li>
+              <div class="dropdown">
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                  Belajar JS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="belajar_js/perkenalan.html">Perkenalan JS</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- akhir header -->
+
+      <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title text-center" style="color: black; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">BIODATA</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-row">
+                            <div class="name">Nama</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="full_name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Jenis Kelamin</div>
+                            <div class="value">
+                                <input class="input--style-6" type="radio" name="jenkel">
+                                Laki-laki
+                                <input class="input--style-6" type="radio" name="jenkel">
+                                Perempuan
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="name">Alamat Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Motivasi / Motto hidup</div>
+                            <div class="value">
+                              <div id="container">
+                                <div id="editor">
+                                </div>
+                        <div class="container">   
+                            <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/super-build/ckeditor.js"></script>
+                            <script>
+                                CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
+                                    toolbar: {
+                                        items: [
+                                            'exportPDF','exportWord', '|',
+                                            'findAndReplace', 'selectAll', '|',
+                                            'heading', '|',
+                                            'bold', 'italic', 'strikethrough', 'underline', 'code', 'subscript', 'superscript', 'removeFormat', '|',
+                                            'bulletedList', 'numberedList', 'todoList', '|',
+                                            'outdent', 'indent', '|',
+                                            'undo', 'redo',
+                                            '-',
+                                            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
+                                            'alignment', '|',
+                                            'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', 'codeBlock', 'htmlEmbed', '|',
+                                            'specialCharacters', 'horizontalLine', 'pageBreak', '|',
+                                            'textPartLanguage', '|',
+                                            'sourceEditing'
+                                        ],
+                                        shouldNotGroupWhenFull: true
+                                    },
+                                    list: {
+                                        properties: {
+                                            styles: true,
+                                            startIndex: true,
+                                            reversed: true
+                                        }
+                                    },
+                                    heading: {
+                                        options: [
+                                            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                                            { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                                            { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+                                            { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+                                            { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
+                                            { model: 'heading5', view: 'h5', title: 'Heading 5', class: 'ck-heading_heading5' },
+                                            { model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' }
+                                        ]
+                                    },
+                                    placeholder: 'Masukkan Pesan disini !',
+                                    fontFamily: {
+                                        options: [
+                                            'default',
+                                            'Arial, Helvetica, sans-serif',
+                                            'Courier New, Courier, monospace',
+                                            'Georgia, serif',
+                                            'Lucida Sans Unicode, Lucida Grande, sans-serif',
+                                            'Tahoma, Geneva, sans-serif',
+                                            'Times New Roman, Times, serif',
+                                            'Trebuchet MS, Helvetica, sans-serif',
+                                            'Verdana, Geneva, sans-serif'
+                                        ],
+                                        supportAllValues: true
+                                    },
+                                    fontSize: {
+                                        options: [ 10, 12, 14, 'default', 18, 20, 22 ],
+                                        supportAllValues: true
+                                    },
+                                    htmlSupport: {
+                                        allow: [
+                                            {
+                                                name: /.*/,
+                                                attributes: true,
+                                                classes: true,
+                                                styles: true
+                                            }
+                                        ]
+                                    },
+                                    htmlEmbed: {
+                                        showPreviews: true
+                                    },
+                                    link: {
+                                        decorators: {
+                                            addTargetToExternalLinks: true,
+                                            defaultProtocol: 'https://',
+                                            toggleDownloadable: {
+                                                mode: 'manual',
+                                                label: 'Downloadable',
+                                                attributes: {
+                                                    download: 'file'
+                                                }
+                                            }
+                                        }
+                                    },
+                                    mention: {
+                                        feeds: [
+                                            {
+                                                marker: '@',
+                                                feed: [
+                                                    '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
+                                                    '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
+                                                    '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
+                                                    '@sugar', '@sweet', '@topping', '@wafer'
+                                                ],
+                                                minimumCharacters: 1
+                                            }
+                                        ]
+                                    },
+                                    removePlugins: [
+                                        'CKBox',
+                                        'CKFinder',
+                                        'EasyImage',
+                                        'RealTimeCollaborativeComments',
+                                        'RealTimeCollaborativeTrackChanges',
+                                        'RealTimeCollaborativeRevisionHistory',
+                                        'PresenceList',
+                                        'Comments',
+                                        'TrackChanges',
+                                        'TrackChangesData',
+                                        'RevisionHistory',
+                                        'Pagination',
+                                        'WProofreader',
+                                        'MathType'
+                                    ]
+                                });
+                            </script>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Upload Foto</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <label class="label--file" for="file">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                <div class="label--desc"R>Upload Foto kamu</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary btn--radius-2 btn--blue-2" type="submit" id="kirim">Kirim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- footer -->
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Riand.</span>
+          </div>
+          
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href=" https://wa.me/6285866267683" target="_blank"><img src="img/wa.png" class="bi" width="24" height="24"><use xlink:href="#whastapp"></use></img></a></li>
+            <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/rianndro_/  " target="_blank"><img src="img/instagram.png" class="bi" width="24" height="24"><use xlink:href="#instagram"></use></img></a></li>
+            <li class="ms-3"><a class="text-muted" href="https://id-id.facebook.com/" target="_blank"><img src="img/fb.png" class="bi" width="24" height="24"><use xlink:href="#facebook"></use></img></a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+      <!-- akhir footer -->
+
+    <!-- js -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

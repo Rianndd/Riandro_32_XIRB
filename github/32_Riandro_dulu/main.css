@@ -1,0 +1,136 @@
+*{
+	text-decoration: none;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.navigasi{
+	background-color: lightslategray;
+	color: black;
+	font-size: 15px;
+	list-style-type: none;
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	padding-bottom: 5px;
+}
+.navigasi li{
+	float: left;
+	margin: 20px;
+	text-decoration: underline;
+	text-decoration: none;
+	color: black;
+}
+.ptc1{
+	width: 200px;
+	height: 200px;
+	border-radius: 300%;
+}
+.kal1{
+	font-size: 25px;
+}
+.kal2{
+	font-size: 25px;
+}
+.p1{
+	font-size: 20px;
+	font-family: sans-serif;
+}
+#tentangsy{
+	font-size: 25px;
+	font-family: sans-serif;
+	background-color: lightslategray;
+}
+.list1{
+	font-size: 20px;
+}
+#galeri{
+	font-size: 25px;
+	background-color: lightslategrey;
+}
+body{
+	background-color: lightgrey;
+}	
+.ptc2{
+	width: 180px;
+	height: 200px;
+	border-radius: 50px;
+}
+.gambar{
+	overflow: hidden;
+	list-style-type: none;
+}
+.gambar li{
+	float: left;
+	margin: 15px;
+}
+.p2{
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.p3{
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+}
+.p4{
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.ptc2:hover{
+	height: 220px;
+	border: 10px solid black;
+}
+.sosmed{
+	height: 20px;
+	margin: 5px; 
+}
+.sosmed:hover{
+	height: 30px;
+	width: 35px;
+}
+.navigasi a{
+	color: black ;
+	text-shadow: 1px 1px 2px;
+}
+.navigasi a:hover{
+	background-color: whitesmoke;
+}
+table tr td:hover{
+	color: red;
+	cursor: pointer;
+}
+.riandro{
+	padding-right: 500px;
+	text-shadow: 1px 1px 2px;
+}
+.crew{
+	background-color: lightslategray;
+}
+.input{
+	margin: 0;
+	margin-top: 20px;
+	text-shadow: 0 0 20px;
+}
+.riandro{
+	font-size: 25px;
+}
+.osis{
+	background-color: lightslategray;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.input{
+	padding-left: 200px;
+}
+.letak1{
+	margin-left: 200px;
+	cursor: pointer;
+}
+.letak2{
+	margin-left: 200px;
+	margin-top: 20px;
+	cursor: pointer;
+}

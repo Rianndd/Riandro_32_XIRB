@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulus - Tidak Lulus</title>
+</head>
+
+<body>
+    <h3>Menentukan Nilai Lulus dan Tidak Lulus</h3>
+    <input type="number" name="" id="nilaia" placeholder="Masukkan Nilai" />
+    <button onclick="hasil()">cek</button>
+
+    <script>
+        function hasil() {
+            var nilai = document.getElementById('nilaia').value;
+
+            if (nilai >= 75 && nilai <= 100) {
+                alert('Lulus');
+            } else if (nilai >= 0 && nilai <= 74) {
+                alert('Tidak Lulus');
+            } else {
+                alert('invalid');
+            }
+        }
+    </script>
+</body>
+
+</html>

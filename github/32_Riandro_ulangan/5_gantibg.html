@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganti - BG</title>
+    <style>
+        .merah {
+            background-color: red;
+            color: white;
+        }
+
+        .kuning {
+            background-color: yellow;
+            color: black;
+        }
+
+        .hijau {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Ganti Background</h3>
+    <select id="ganti" onchange="guanti()">
+        <option value="merah">Merah</option>
+        <option value="kuning">kuning</option>
+        <option value="hijau">hijau</option>
+    </select>
+
+    <script>
+        function guanti() {
+            var pilih = document.getElementById('ganti').value;
+            var bg = document.body;
+            if (pilih == 'merah') {
+                bg.classList = 'merah';
+            } else if (pilih == 'kuning') {
+                bg.classList = 'kuning';
+            } else {
+                bg.classList = 'hijau';
+            }
+        }
+    </script>
+</body>
+
+</html>

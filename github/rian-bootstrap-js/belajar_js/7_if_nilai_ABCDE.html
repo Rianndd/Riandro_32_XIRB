@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilai ABCDE</title>
+</head>
+
+<body>
+  <input type="number" name="" id="nilaia" placeholder="Masukkan Nilai" />
+  <button onclick="hasil()">cek</button>
+
+  <script>
+    function hasil() {
+      var nilai = document.getElementById('nilaia').value;
+
+      if (nilai <= 60) {
+        alert('E');
+      } else if (nilai >= 61 && nilai <= 70) {
+        alert('D');
+      } else if (nilai >= 71 && nilai <= 80) {
+        alert('C');
+      } else if (nilai >= 81 && nilai <= 90) {
+        alert('B');
+      } else if (nilai >= 91 && nilai <= 100) {
+        alert('A');
+      } else {
+        alert('invalid');
+      }
+    }
+  </script>
+</body>
+
+</html>

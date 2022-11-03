@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fungsi Output JS</title>
+  </head>
+  <body>
+    <button onclick="killme()">Kill Me!</button>
+    <button onclick="loveme()">Love Me!</button>
+    <button onclick="hateme()">Hate Me!</button>
+    <h1 id="ferdi"></h1>
+    <h2 id="anya"></h2>
+    <select id="nama" onchange="tampil()">
+      <option value="udin">Samsudin</option>
+      <option value="jindan">Habib Jindan</option>
+      <option value="anya">Anya Geraldine</option>
+    </select>
+    <h1 id="output_select"></h1>
+    <script>
+      var ferdi = document.getElementById('ferdi');
+      var anya = document.getElementById('anya');
+      var nama = document.getElementById('nama');
+      var output_select = document.getElementById('output_select');
+      // variabel untuk menampung pada tag Id output
+
+      function tampil() {
+        if (nama.value == 'udin') {
+          output_select.innerHTML = 'hoooh tenan';
+        } else if (nama.value == 'jindan') {
+          output_select.innerHTML = 'ente kadang kadang ente';
+        } else if (nama.value == 'anya') {
+          output_select.innerHTML = 'aku cinta anya';
+        }
+      }
+      function killme() {
+        //menampilkan box bunuh aku
+        alert('bunuh aku');
+      }
+      function loveme() {
+        alert('sayang aku');
+      }
+      function hateme() {
+        alert('hujat aku');
+      }
+    </script>
+  </body>
+</html>

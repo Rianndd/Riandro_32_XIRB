@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <center>
+        <h2>Formulir Pendaftaran</h2>
+    </center>
+    <form>
+        <div>
+            <label>Nama :</label>
+            <input type="text" name="nama" id="nama" />
+        </div>
+        <div>
+            <label>Kelas :</label>
+            <select name="kelas" id="kelas">
+                <option value="XI RA">XI RA</option>
+                <option value="XI RB">XI RB</option>
+                <option value="XI RC">XI RC</option>
+            </select>
+        </div>
+        <div>
+            <label>No. Absen</label>
+            <input type="number" id="abs">
+        </div>
+        <div>
+            <label>Alamat:</label>
+            <textarea name="alamat" id="almt"></textarea>
+        </div>
+        <div>
+            <button onclick="daftar()" type="button">DAFTAR</button>
+        </div>
+        </div>
+
+        <hr>
+        <h4>Nama : <h3 id="tampil1"></h3>
+        </h4>
+        <h4>Kelas : <h3 id="tampil2"></h3>
+        </h4>
+        <h4>Absen : <h3 id="tampil3"></h3>
+        </h4>
+        <h4>Alamat : <h3 id="tampil4"></h3>
+        </h4>
+    </form>
+
+
+
+
+
+
+    <script>
+        function daftar() {
+            var nama = document.getElementById('nama').value;
+            var kelas = document.getElementById('kelas').value;
+            var absen = document.getElementById('abs').value;
+            var alamat = document.getElementById('almt').value;
+            var tmpnama = document.getElementById('tampil1');
+            var tmpkelas = document.getElementById('tampil2');
+            var tmpabsen = document.getElementById('tampil3');
+            var tmpalamat = document.getElementById('tampil4');
+            tmpnama.innerHTML = nama
+            tmpkelas.innerHTML = kelas
+            tmpabsen.innerHTML = absen
+            tmpalamat.innerHTML = alamat
+        }
+    </script>
+</body>
+
+</html>

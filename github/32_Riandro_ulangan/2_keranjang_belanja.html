@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Toko</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onclick="myFunction
+            ()">
+        </div>
+        <div>
+            <h3 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                Keranjang Belanja</h3><br>
+            <hr>
+        </div>
+
+        <form class="row g-3">
+            <!-- bolpoin -->
+            <div class="col-3">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px; color: blue;"
+                    id="bolpoin" value="bolpoin" />
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="inputbolpoin" placeholder="Jumlah Bolpoin" />
+            </div>
+            <hr />
+            <!--buku -->
+            <div class="col-3">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px; color: blue;"
+                    id="buku" value="buku" />
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="inputbuku" placeholder="Jumlah Buku" />
+            </div>
+            <hr />
+            <!-- pensil -->
+            <div class="col-3">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px; color: blue;"
+                    id="pensil" value="pensil" />
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="inputpensil" placeholder="Jumlah pensil" />
+            </div>
+            <hr />
+            <!-- penghapus -->
+            <div class="col-3">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px; color: blue;"
+                    id="penghapus" value="penghapus" />
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="inputpenghapus" placeholder="Jumlah penghapus" />
+            </div>
+            <hr />
+        </form>
+
+        <div class="col-auto text-center">
+            <button onclick="bayar()" type="button" class="btn btn-primary mb-3">bayar</button>
+        </div>
+        <hr>
+        <h3 id="totalharga">Total Harga :</h3>
+        <h3 id="tampildiskon">Total Diskon :</h3>
+        <div class="col-3">
+            <input type="number" class="form-control" id="inputdiskon" placeholder="Diskon" />
+        </div>
+        <h3 id="totalbayar">Total Bayar :</h3>
+    </div>
+
+    <script>
+        function bayar() {
+            // jumlah
+            var bolpoin = document.getElementById('inputbolpoin').value;
+            var buku = document.getElementById('inputbuku').value;
+            var pensil = document.getElementById('inputpensil').value;
+            var penghapus = document.getElementById('inputpenghapus').value;
+            var diskon = document.getElementById('inputdiskon').value;
+            var harga = (bolpoin * 2000) + (buku * 5000) + (pensil * 2000) + (penghapus * 1000);
+            // total harga
+            var totalharga = document.getElementById('totalharga');
+            totalharga.innerHTML = harga
+            // diskon
+            var diskonAkhir = diskon / 100
+            var hargaDiskon = harga * diskonAkhir;
+            var tampil = document.getElementById('tampildiskon');
+            tampil.innerHTML = hargaDiskon
+            // harga akhir
+            var hargaAkhir = harga - hargaDiskon;
+            var totalbayar = document.getElementById('totalbayar');
+            totalbayar.innerHTML = hargaAkhir
+        }
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variabel dan Tipe data</title>
+  </head>
+  <body>
+    Nama :
+    <div id="nama"></div>
+    <br />
+    Umur :
+    <div id="umur"></div>
+    <br />
+    Status :
+    <div id="status"></div>
+    <br />
+    Link Instagram : <button><a id="instagram" target="_blank"> Klik me </a></button>
+    <br />
+    <script>
+      //menampung variabel div ID pada document HTML
+      var id_nama = document.getElementById('nama');
+      var id_umur = document.getElementById('umur');
+      var id_status = document.getElementById('status');
+      var id_instagram = document.getElementById('instagram');
+      // membuat variabel
+      var nama = 'Riandro Shevara Milano';
+      var umur = 15;
+      var status = 'Jomblo';
+      var instagram = 'https://www.instagram.com/rianndro_/';
+      //output ke document HTML
+      id_nama.innerHTML = nama;
+      id_umur.innerHTML = umur + ' tahun';
+      id_status.innerHTML = status;
+      id_instagram.href = instagram;
+    </script>
+  </body>
+</html>

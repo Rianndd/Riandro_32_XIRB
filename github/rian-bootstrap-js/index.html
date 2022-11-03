@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perkenalan Bootstrap</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: lightgrey;
+    }
+
+    .nav nav-pills {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary text-opacity-75">
+      <div class="container">
+        <img src="img/picture1.jfif" alt="" style="height: 30px; padding-right: 550px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="font-family: roboto;">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active btn btn-primary" aria-current="page" href="#"
+                style="color: black; margin-right: 20px;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hunter" style="color: black; margin-right: 20px;">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galeri" style="color: black; margin-right: 20px;">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a href="table.html" class="nav-link" style="color: black; margin-right: 20px;">Table</a>
+            </li>
+            <li class="nav-item">
+              <a href="form.html" class="nav-link" style="color: black; margin-right: 20px;">Form</a>
+            </li>
+            <div class="dropdown">
+              <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                Belajar JS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="belajar_js/1_perkenalan.html" target="_blank">Perkenalan JS</a></li>
+                <li><a class="dropdown-item" href="belajar_js/2_atribut.html" target="_blank">Atribut JS</a></li>
+                <li><a class="dropdown-item" href="belajar_js/3_fungsi_sederhana.html" target="_blank">Fungsi Sederhana
+                    JS</a></li>
+                <li><a class="dropdown-item" href="belajar_js/4_variabel_dan_tipedata.html" target="_blank">Variabel dan
+                    Tipe Data Js</a></li>
+                <li><a class="dropdown-item" href="belajar_js/5_dialog_io.html" target="_blank">Dialog IO</a></li>
+                <li><a class="dropdown-item" href="belajar_js/6_operator_pembanding.html" target="_blank">Operator
+                    Pembanding JS</a></li>
+                <li><a class="dropdown-item" href="belajar_js/7_if_nilai_ABCDE.html" target="_blank">IF Nilai</a></li>
+                <li><a class="dropdown-item" href="#" target="_blank">For Perulangan
+                    JS</a></li>
+                <li><a class="dropdown-item" href="belajar_js/luas_bangun_datar.html" target="_blank">Hitung Luas Bangun
+                    Datar</a></li>
+                <li><a class="dropdown-item" href="belajar_js/toko.html" target="_blank">Keranjang Belanja</a></li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir header -->
+    <!-- carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+      style="margin-top: 90px;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/picture2.jfif" class="d-block w-100" alt="..." style="height: 500px" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/picture3.jfif" class="d-block w-100" alt="..." style="height: 500px" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/picture4.jfif" class="d-block w-100" alt="..." style="height: 500px" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- akhir carousel -->
+    <!-- rian -->
+
+    <h3 id="hunter" class="text-center" style="font-family: fantasy; margin-top: 20px">RIANDRO SHEVARA MILANO</h3>
+    <br>
+    <div class="row album py-5 bg-light">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="p-3 mb-3 bg-primary text-white text-center">23</div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 mb-3 bg-primary text-white text-center">OKTOBER</div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 mb-3 bg-primary text-white text-center">2006</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- akhir rian -->
+    <!-- about -->
+    <div class="row featurette row album py-5 bg-light">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1" style="font-family: fantasy;">Hello my name Riandro Shevara Milano
+          <span class="text-muted"></span>
+        </h2>
+        <p class="lead">Saya lahir di Karanganyar pada tanggal 23 Oktober 2006. Jadi usia saya sekarang adalah 16 tahun.
+          Saya memiliki hobby bermain game. saya bercita cita untuk menjadi orang sukses.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="img/picture5.jpeg" style="height: 400px; width: 400px"
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+      </div>
+    </div>
+    <!-- akhir about -->
+    <!-- galeri -->
+    <div id="galeri">
+      <h3 class="text-center" style="font-family: fantasy; margin-top: 20px; padding-bottom: 50px;">GALERI</h3>
+      <hr class="container">
+    </div>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/picture6.jpeg" class="bd-placeholder-img card-img-top" width="500px" height="400px"
+                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em"></text></img>
+
+              <div class="card-body">
+                <p class="card-text">Foto disaat bermain di rumah Gilang.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/picture7.jpeg" class="bd-placeholder-img card-img-top" width="500px" height="400px"
+                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em"></text></img>
+
+              <div class="card-body">
+                <p class="card-text">Foto bersama sahabat saya.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/picture8.jpeg" class="bd-placeholder-img card-img-top" width="500px" height="400px"
+                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em"></text></img>
+
+              <div class="card-body">
+                <p class="card-text">Foto bersama teman - teman saya.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir galeri -->
+
+    <!-- footer -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Riand.</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href=" https://wa.me/6285866267683" target="_blank"><img
+                src="img/wa.png" class="bi" width="24" height="24">
+              <use xlink:href="#whastapp"></use></img>
+            </a></li>
+          <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/rianndro_/  " target="_blank"><img
+                src="img/instagram.png" class="bi" width="24" height="24">
+              <use xlink:href="#instagram"></use></img>
+            </a></li>
+          <li class="ms-3"><a class="text-muted" href="https://id-id.facebook.com/" target="_blank"><img
+                src="img/fb.png" class="bi" width="24" height="24">
+              <use xlink:href="#facebook"></use></img>
+            </a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <!-- akhir footer -->
+
+  <!-- js -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

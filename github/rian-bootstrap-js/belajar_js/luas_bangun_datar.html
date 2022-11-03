@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>Hitung Luas Bangun Datar</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onclick="myFunction
+            ()">
+        </div>
+        <div>
+            <h2 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                Luas
+                Bangun Datar</h2>
+            <hr />
+            <br />
+        </div>
+        <form class="row g-3">
+            <!-- persegi -->
+            <div class="col-auto">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px; color: blue;"
+                    id="persegi" value="Luas Persegi" />
+            </div>
+            <div class="col-auto">
+                <label for="inputpersegi" class="visually-hidden">Hitung Luas</label>
+                <input type="number" class="form-control" id="inputpersegi" placeholder="Masukkan Sisi" />
+            </div>
+            <div class="col-auto">
+                <button onclick="luaspersegi()" type="button" class="btn btn-primary mb-3">Hitung</button>
+            </div>
+            <div class="col-auto">
+                <button><label id="hasilpersegi">Jawaban</label></button>
+            </div>
+            <hr />
+            <!-- persegi panjang -->
+            <div class="col-auto">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px;color: blue;"
+                    id="persegipanjang" value="Luas Persegi Panjang" />
+            </div>
+            <div class="col-auto">
+                <label for="inputpersegipanjang" class="visually-hidden">Hitung Luas</label>
+                <input type="number" class="form-control" id="inputpersegipanjang1"
+                    placeholder="Masukkan Nilai Panjang" />
+                <br />
+                <input type="number" class="form-control" id="inputpersegipanjang2"
+                    placeholder="Masukkan Nilai Lebar" />
+            </div>
+            <div class="col-auto">
+                <button onclick="luaspersegipanjang()" type="button" class="btn btn-primary mb-3">Hitung</button>
+            </div>
+            <div class="col-auto">
+                <button><label id="hasilpersegipanjang">Jawaban</label></button>
+            </div>
+            <hr />
+            <!-- Lingkaran -->
+            <div class="col-auto">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px;color: blue;"
+                    id="lingkaran" value="Luas Lingkaran" />
+            </div>
+            <div class="col-auto">
+                <label for="inputlingkaran" class="visually-hidden">Hitung Luas</label>
+                <input type="number" class="form-control" id="inputlingkaran" placeholder="Masukkan jari-jari" />
+            </div>
+            <div class="col-auto">
+                <button onclick="luaslingkaran()" type="button" class="btn btn-primary mb-3">Hitung</button>
+            </div>
+            <div class="col-auto">
+                <button><label id="hasillingkaran">Jawaban</label></button>
+            </div>
+            <hr />
+            <!-- segitiga -->
+            <div class="col-auto">
+                <input type="text" readonly class="form-control-plaintext" style="margin-left: 20px;color: blue;"
+                    id="segitiga" value="Luas Segitiga" />
+            </div>
+            <div class="col-auto">
+                <label for="inputsegitiga" class="visually-hidden">Hitung Luas</label>
+                <input type="number" class="form-control" id="inputsegitiga1" placeholder="Masukkan Alas" />
+                <br />
+                <input type="number" class="form-control" id="inputsegitiga2" placeholder="Masukkan Tinggi" />
+            </div>
+            <div class="col-auto">
+                <button onclick="luassegitiga()" type="button" class="btn btn-primary mb-3">Hitung</button>
+            </div>
+            <div class="col-auto">
+                <button><label id="hasilsegitiga">Jawaban</label></button>
+            </div>
+            <hr />
+        </form>
+
+    </div>
+
+    <script>
+        function luaspersegi() {
+            var sisi = parseInt(document.getElementById("inputpersegi").value);
+            let Luas = sisi * sisi;
+            let hasil = document.getElementById("hasilpersegi");
+            hasil.innerHTML = Luas
+        }
+        function luaspersegipanjang() {
+            var panjang = parseInt(document.getElementById("inputpersegipanjang1").value);
+            var lebar = parseInt(document.getElementById("inputpersegipanjang2").value);
+            let Luas = panjang * lebar;
+            let hasil = document.getElementById("hasilpersegipanjang");
+            hasil.innerHTML = Luas
+        }
+        function luaslingkaran() {
+            var jari = parseInt(document.getElementById('inputlingkaran').value);
+            let luas = Math.PI * Math.pow(jari, 2);
+            let hasilluas = document.getElementById('hasillingkaran');
+            hasilluas.innerHTML = luas;
+        }
+        function luassegitiga() {
+            var nilaia = parseInt(document.getElementById("inputsegitiga1").value);
+            var nilaib = parseInt(document.getElementById("inputsegitiga2").value);
+            let Luas = 0.5 * nilaia * nilaib;
+            let hasil = document.getElementById("hasilsegitiga");
+            hasil.innerHTML = Luas
+        }
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+    </script>
+    <!-- Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
